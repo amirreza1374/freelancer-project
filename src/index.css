@@ -65,6 +65,4 @@ body {
   background-color: rgb(var(--background-app-rgb));
 }
 
-label {
-  display: block;
-}
+
