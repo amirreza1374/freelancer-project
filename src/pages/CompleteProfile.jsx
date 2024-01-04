@@ -1,9 +1,11 @@
-import CompleteProfileForm from "./CompleteProfileForm";
+import CompleteProfileForm from "../features/authentication/CompleteProfileForm";
 
 function CompleteProfile() {
   return (
-    <div>
-      <CompleteProfileForm />
+    <div className="container xl:max-w-screen-xl">
+      <div>
+        <CompleteProfileForm />
+      </div>
     </div>
   );
 }
