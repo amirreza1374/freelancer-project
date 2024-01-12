@@ -8,6 +8,7 @@ import Loading from "../../ui/Loading";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import RadioInputGroup from "../../ui/RadioInputGroup";
+import useUser from "./useUser";
 
 function CompleteProfileForm() {
   const {
@@ -23,6 +24,12 @@ function CompleteProfileForm() {
   // const [role, setRole] = useState("");
 
   const navigate = useNavigate();
+
+  const { user } = useUser();
+
+  useEffect(() => {
+    if (user) navigate("/", { replace: true });
+  }, [user, navigate]);
 
   const { mutateAsync, isPending } = useMutation({
     mutationFn: completeProfile,
