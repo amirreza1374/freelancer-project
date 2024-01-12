@@ -21,9 +21,6 @@ const options = [
   },
 ];
 
-const onSubmit = (data) => {
-  console.log(data);
-};
 
 function ChangeProposalStatus({ proposalId, onClose }) {
   const { register, handleSubmit } = useForm();
