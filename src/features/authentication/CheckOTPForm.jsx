@@ -31,6 +31,7 @@ function CheckOTPForm({ phoneNumber, onBack, onResendOtp, otpResponse }) {
       }
       if (user.role === "OWNER") return navigate("/owner");
       if (user.role === "FREELANCER") return navigate("/freelancer");
+      if (user.role === "ADMIN") return navigate("/admin");
 
       if (user.active) {
         // if (user.role === "OWNER") navigate("/owner");
