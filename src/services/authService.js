@@ -21,3 +21,14 @@ export function getUser(data) {
 export function logoutApi(data) {
   return http.post("/user/logout", data).then(({ data }) => data.data);
 }
+
+export function getUsersApi() {
+  return http.get("/admin/user/list").then(({ data }) => data.data);
+}
+
+export function changeUserStatusApi({ userId, data }) {
+  console.log(userId);
+  return http
+    .patch(`/admin/user/verify/${userId}`, data)
+    .then(({ data }) => data.data);
+}
